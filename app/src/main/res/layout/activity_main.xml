@@ -4,20 +4,231 @@
     android:paddingRight="0dp"
     android:paddingTop="0dp"
     android:paddingBottom="0dp" tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/baseLayout">
 
-    <GridLayout
+    <RelativeLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/topGridLayout"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
         android:background="#ff000000"
-        android:layout_weight="1"></GridLayout>
+        android:focusableInTouchMode="false"
+        android:id="@+id/topLinearLayout"
+        android:baselineAligned="false">
 
-    <GridLayout
+        <ToggleButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New ToggleButton"
+            android:id="@+id/powerButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="58dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="55dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tunerLayout"
+            android:layout_marginLeft="102dp"
+            android:layout_marginStart="102dp"
+            android:layout_below="@+id/powerButton"
+            android:layout_toRightOf="@+id/powerButton"
+            android:layout_toEndOf="@+id/powerButton">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seek Up"
+                android:id="@+id/tuneUp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seek Down"
+                android:id="@+id/tuneDown"
+                android:layout_below="@+id/tunerLayout"
+                android:layout_alignLeft="@+id/tunerLayout"
+                android:layout_alignStart="@+id/tunerLayout" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Display"
+            android:id="@+id/radioDisplay"
+            android:layout_alignTop="@+id/powerButton"
+            android:layout_toRightOf="@+id/tunerLayout"
+            android:layout_marginLeft="51dp"
+            android:layout_marginStart="51dp"
+            android:textSize="60dp"
+            android:textColor="#ff000000"
+            android:paddingLeft="125dp"
+            android:paddingRight="125dp"
+            android:background="#ffb0b0b0" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/presetLayout"
+            android:layout_alignBottom="@+id/tunerLayout"
+            android:layout_alignRight="@+id/radioDisplay"
+            android:layout_alignEnd="@+id/radioDisplay"
+            android:layout_alignLeft="@+id/radioDisplay"
+            android:layout_alignStart="@+id/radioDisplay">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/preset1"
+                android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:id="@+id/preset2"
+                android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:id="@+id/preset3"
+                android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:id="@+id/preset4"
+                android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:id="@+id/preset5"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="58dp"
+            android:layout_marginStart="58dp"
+            android:layout_alignBottom="@+id/presetLayout"
+            android:layout_toRightOf="@+id/radioDisplay"
+            android:layout_toEndOf="@+id/radioDisplay"
+            android:id="@+id/amfmLayout">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AM"
+                android:id="@+id/am" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FM"
+                android:id="@+id/fm" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:id="@+id/volumeControl"
+            android:layout_alignBottom="@+id/amfmLayout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="65dp"
+            android:layout_marginEnd="65dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:id="@+id/bottomGridLayout"
-        android:background="#ff686868"
-        android:layout_weight="1"></GridLayout>
+        android:layout_weight="1"
+        android:background="#ff000000"
+        android:id="@+id/bottomLinearLayout"
+        android:weightSum="1">
 
+        <ImageView
+            android:layout_width="414dp"
+            android:layout_height="300dp"
+            android:id="@+id/imageView"
+            android:src="@mipmap/tray2" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cdButtonsLayout"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView"
+            android:layout_marginTop="109dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Track"
+                android:id="@+id/lastTrack"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="||"
+                android:id="@+id/pause"
+                android:textStyle="bold"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play"
+                android:id="@+id/play"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Track"
+                android:id="@+id/nextTrack"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop"
+                android:id="@+id/stop"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat"
+                android:id="@+id/repeat"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
 </LinearLayout>
