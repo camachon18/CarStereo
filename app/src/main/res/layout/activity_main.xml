@@ -36,8 +36,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:id="@+id/tunerLayout"
-            android:layout_marginLeft="102dp"
-            android:layout_marginStart="102dp"
             android:layout_below="@+id/powerButton"
             android:layout_toRightOf="@+id/powerButton"
             android:layout_toEndOf="@+id/powerButton">
@@ -124,6 +122,15 @@
                 android:text="5"
                 android:id="@+id/preset5"
                 android:layout_weight="1" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:id="@+id/preset6"
+                android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -154,11 +161,8 @@
             android:layout_width="150dp"
             android:layout_height="100dp"
             android:id="@+id/volumeControl"
-            android:layout_alignBottom="@+id/amfmLayout"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="65dp"
-            android:layout_marginEnd="65dp" />
+            android:layout_below="@+id/presetLayout"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
@@ -175,7 +179,7 @@
             android:layout_width="414dp"
             android:layout_height="300dp"
             android:id="@+id/imageView"
-            android:src="@mipmap/tray2" />
+            android:src="@mipmap/cd_tray" />
 
         <LinearLayout
             android:orientation="horizontal"
