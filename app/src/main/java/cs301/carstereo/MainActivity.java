@@ -277,7 +277,15 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-               amArray[0]= radDisplay.getText();
+                if (amtrue == true){
+                    amArray[0]= amStation;
+                }
+                else {
+                    newfm = (double) fmStation;
+                    newfm = newfm/10;
+                    fmArray[0]= newfm;
+                }
+
             }
             return true;
         }
@@ -287,7 +295,16 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-                radDisplay.setText(radDisplay.getText());
+                    if (amtrue == true){
+                        amArray[1]= amStation;
+                    }
+                    else {
+                        newfm = (double) fmStation;
+                        newfm = newfm/10;
+                        fmArray[1]= newfm;
+                    }
+
+
             }
             return true;
         }
@@ -298,7 +315,16 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-                radDisplay.setText(radDisplay.getText());
+                    if (amtrue == true){
+                        amArray[2]= amStation;
+                    }
+                    else {
+                        newfm = (double) fmStation;
+                        newfm = newfm/10;
+                        fmArray[2]= newfm;
+                    }
+
+
             }
             return true;
         }
@@ -309,7 +335,16 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-                radDisplay.setText(radDisplay.getText());
+                    if (amtrue == true){
+                        amArray[3]= amStation;
+                    }
+                    else {
+                        newfm = (double) fmStation;
+                        newfm = newfm/10;
+                        fmArray[3]= newfm;
+                    }
+
+
             }
             return true;
         }
@@ -320,7 +355,16 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-                radDisplay.setText(radDisplay.getText());
+                    if (amtrue == true){
+                        amArray[4]= amStation;
+                    }
+                    else {
+                        newfm = (double) fmStation;
+                        newfm = newfm/10;
+                        fmArray[4]= newfm;
+                    }
+
+
             }
             return true;
         }
@@ -331,7 +375,17 @@ public class MainActivity extends ActionBarActivity {
         @Override
         public boolean onLongClick(View v) {
             if (power.isChecked() == true){
-                radDisplay.setText(radDisplay.getText());
+                    if (amtrue == true){
+                        amArray[5]= amStation;
+                    }
+                    else {
+                        newfm = (double) fmStation;
+                        newfm = newfm/10;
+                        fmArray[5]= newfm;
+
+                    }
+
+
             }
             return true;
         }
